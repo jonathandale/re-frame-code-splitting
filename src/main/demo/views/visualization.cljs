@@ -12,7 +12,8 @@
 (defn render []
   (let [chart-loaded? (reagent/atom false)]
     (reagent/create-class
-      {:component-did-mount #(load-module "chart" chart-loaded?)
+      {:component-did-mount #(when-not (loader/loaded? "chart")
+                               (load-module "chart" chart-loaded?))
        :reagent-render
         (fn []
           (cond
