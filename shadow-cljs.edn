@@ -22,14 +22,16 @@
                  :output-dir "public/js/compiled"
                  :asset-path "/js/compiled"
                  :dev        {:compiler-options {:closure-defines {re_frame.trace.trace_enabled?        true
-                                                                   day8.re-frame.tracing.trace-enabled? true}
-                                                 :optimizations :simple}}
+                                                                   day8.re-frame.tracing.trace-enabled? true}}}
                  :devtools   {:http-root    "public"
                               :http-handler shadow.http.push-state/handle
                               :http-port    8280
                               :after-load   demo.core/mount-root
                               :preloads     [devtools.preload
-                                             day8.re-frame-10x.preload]}}
+                                             day8.re-frame-10x.preload]}
+                 :release {:compiler-options {:source-map true
+                                              :optimizations :advanced
+                                              :infer-externs :auto}}}
 
                 :browser-test
                 {:target           :browser-test
