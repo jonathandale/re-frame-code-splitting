@@ -7,12 +7,12 @@
 
 (defn page-view [content]
   [:div.flex.flex-col.items-center.text-center.min-h-screen
-   [:header.bg-blue-darker.w-full.p-8
-     [:ul.list-reset.flex.justify-center
-      [:li.mx-2 [:a.text-grey-light.no-underline {:href (routes/home)} "Home"]]
-      [:li.mx-2 [:a.text-grey-light.no-underline {:href (routes/visualization)} "Visualization"]]]]
-   [:main.w-full.bg-grey-lightest.flex-grow.flex.items-center.justify-center.p-8 content]
-   [:footer.w-full.p-6]])
+   [:header.bg-grey-lightest.w-full.p-8
+     [:ul.list-reset.flex.items-stretch
+      [:li.mx-2 [:a.text-blue-darker.no-underline.hover:underline {:href (routes/home)} "Home"]]
+      [:li.mx-2 [:a.text-blue-darker.no-underline.hover:underline {:href (routes/visualization)} "Visualization"]]
+      [:li.mx-2.flex-grow.text-right [:a.text-blue-darker.no-underline.hover:underline {:href "https://github.com/jonathandale/re-frame-code-splitting"} "Github"]]]]
+   [:main.w-full.flex-grow.flex.items-center.justify-center.p-8 content]])
 
 (defn app-view [{:keys [page-id]}]
   [page-view

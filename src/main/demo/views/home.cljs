@@ -6,6 +6,6 @@
 (defn render []
   [:div
     [:p
-      [:span "This page is bundled in the base module, but this "]
+      [:span "This page is bundled in the base module, but the "]
       [:a.text-blue.no-underline.hover:underline {:href (routes/visualization)} "visualization page"]]
-    [:p " is a module, that loads another module with a d3js dependency."]])
+    [:p " loads the chart module with a d3 js dependency."]])
