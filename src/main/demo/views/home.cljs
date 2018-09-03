@@ -5,5 +5,5 @@
 
 (defn render []
   [:<>
-    [:p "This page is a module, and one with a "
+    [:p "This page is a module, and here's one with a "
       [:a.text-blue.no-underline.hover:underline {:href (routes/visualization)} "d3 js dependency"]]])
