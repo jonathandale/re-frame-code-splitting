@@ -7,7 +7,7 @@
 
 (defn page-view [content]
   [:div.flex.flex-col.items-center.text-center.min-h-screen
-   [:header.bg-indigo-darker.w-full.p-8
+   [:header.bg-blue-darker.w-full.p-8
      [:ul.list-reset.flex.justify-center
       [:li.mx-2 [:a.text-grey-light.no-underline {:href (routes/home)} "Home"]]
       [:li.mx-2 [:a.text-grey-light.no-underline {:href (routes/visualization)} "Visualization"]]]]

@@ -16,7 +16,7 @@
                  :module-loader true
                  :modules    {:base {:entries [demo.core]}
                               :visualization {:entries [demo.views.visualization]
-                                      :depends-on #{:base}}
+                                              :depends-on #{:base}}
                               :chart {:entries [demo.views.chart]
                                       :depends-on #{:visualization}}}
                  :output-dir "public/js/compiled"

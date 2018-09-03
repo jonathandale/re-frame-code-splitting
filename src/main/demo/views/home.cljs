@@ -4,6 +4,8 @@
             [re-frame.core :as re-frame]))
 
 (defn render []
-  [:<>
-    [:p "This page is a module, and here's one with a "
-      [:a.text-blue.no-underline.hover:underline {:href (routes/visualization)} "d3 js dependency"]]])
+  [:div
+    [:p
+      [:span "This page is bundled in the base module, but this "]
+      [:a.text-blue.no-underline.hover:underline {:href (routes/visualization)} "visualization page"]]
+    [:p " is a module, that loads another module with a d3js dependency."]])

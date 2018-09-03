@@ -135,8 +135,7 @@
                               (add-lines group-tick)
                               (add-text group-tick)
                               (add-ribbons with-datum)))
-     :component-will-unmount #(prn "unmount")
      :reagent-render
       (fn []
         [:svg {:width (str size "px")
-                 :height (str size "px")}])}))
+               :height (str size "px")}])}))
